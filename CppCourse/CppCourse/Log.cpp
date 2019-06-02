@@ -1,6 +1,13 @@
+// pre-processor
+#include "Log.h"
 #include <iostream>
 
-// const char* type that can hold strings
-void Log(const char* message) {
+void InitLog(const char* message) {
+	Log("Initializing log");
+}
+
+
+void Log(const char* message)
+{
 	std::cout << message << std::endl;
 }

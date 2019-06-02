@@ -1,16 +1,9 @@
 #include <iostream>
+#include "Log.h"
 
-// Declaration
-void Log(const char* message);
-
-int main() {
-	
-	std::cout << sizeof(int) << std::endl;
-	// removes the - or +
-	std::cout << sizeof(unsigned int) << std::endl;
-	std::cout << sizeof(double) << std::endl;
-	std::cout << sizeof(float) << std::endl;
-	std::cout << sizeof(bool) << std::endl;
-	std::cout << sizeof(char) << std::endl;
+int main() 
+{
+	InitLog("Initializing Log");
+	Log("Hello World");
 	std::cin.get();
 }
