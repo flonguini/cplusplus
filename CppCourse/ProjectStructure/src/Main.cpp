@@ -1,19 +1,26 @@
 #include <iostream>
 
+#define LOG(x) std::cout << x << std::endl;
+
 int main()
 {
 
-	for (int i = 1; i < 20; i++)
-	{
-		//if (i % 2 == 0)
-		//	continue; // go to next iteration
+	int var = 8;
 
-		if (i % 5 == 0)
-			break; // stop the iteration
-		
-		std::cout << "Hello World ";
-		std::cout << i << std::endl;
+	// the memory address of var
+	int* ptr = &var; 
+	
+	*ptr = 10;
 
-	}
+	LOG(var);
 
+	// Alocate 8 bits
+	char* buffer = new char[8];
+	memset(buffer, 0, 8);
+
+	delete[] buffer;
+
+	char** prt2 = &buffer;
+	
+	std::cin.get();
 }
