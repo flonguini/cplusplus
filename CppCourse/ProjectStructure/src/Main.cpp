@@ -2,25 +2,20 @@
 
 #define LOG(x) std::cout << x << std::endl;
 
+void Increment(int& value)
+{
+	value++;
+}
+
 int main()
 {
 
 	int var = 8;
+	Increment(var);
+	// reference to var address
+	int& ref = var;
 
-	// the memory address of var
-	int* ptr = &var; 
-	
-	*ptr = 10;
-
-	LOG(var);
-
-	// Alocate 8 bits
-	char* buffer = new char[8];
-	memset(buffer, 0, 8);
-
-	delete[] buffer;
-
-	char** prt2 = &buffer;
+	LOG(ref);
 	
 	std::cin.get();
 }
