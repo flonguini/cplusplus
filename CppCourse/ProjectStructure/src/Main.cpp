@@ -2,20 +2,31 @@
 
 #define LOG(x) std::cout << x << std::endl;
 
-void Increment(int& value)
+class Player 
 {
-	value++;
-}
+	public:
+		int x, y;
+		int speed;
+
+		void Move(int xa, int ya) 
+		{
+			x += xa * speed;
+			y += ya * speed;
+		}
+};
 
 int main()
 {
+	Player player;
 
-	int var = 8;
-	Increment(var);
-	// reference to var address
-	int& ref = var;
+	player.x = 1;
+	player.y = 5;
+	player.speed = 1;
 
-	LOG(ref);
-	
+	player.Move(3, 5);
+
+	LOG(player.x);
+	LOG(player.y);
+
 	std::cin.get();
 }
